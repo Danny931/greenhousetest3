@@ -2725,6 +2725,7 @@
           let adds = str.substr(0, 6) + "..." + str.slice(-4);
   
           document.getElementById("owneraddress").innerHTML = adds;
+          document.getElementById("owneraddress2").innerHTML = adds;
   
           return web3;
         }
@@ -3024,17 +3025,11 @@
                                                             class="v-icon notranslate mdi mdi-account-circle theme--light textFaint--text"
                                                             style="font-size: 110px;"></i>
                                                         <div class="ml-2">
-                                                            <div class="mb-1"> Your account: 
+                                                            <div class="mb-1"> Your account:(
                                                                 <button data-v-128c9706="" type="button"
-                        class="v-btn v-btn--outlined v-btn--rounded theme--light v-size--small text--text font-weight-bold" id="owneraddress"><span
+                        class="v-btn v-btn--outlined v-btn--rounded theme--light v-size--small text--text font-weight-bold" id="owneraddress2"><span
                             class="v-btn__content"><span data-v-128c9706="">connect</span></span></button>
-                                                                <!----><button data-v-128c9706="" type="button"
-                        class="v-btn v-btn--icon v-btn--round theme--light v-size--default textFaint--text"><span
-                            class="v-btn__content"><i data-v-128c9706="" aria-hidden="true"
-                                class="v-icon notranslate mdi mdi-white-balance-sunny theme--light"
-                                style="font-size: 16px;"></i></span></button>
-                    <!---->
-                                                            </div>
+                                                            )</div>
                                                             <div class="d-flex align-center flex-wrap">
                                                                 <!---->
                                                                 <!---->
