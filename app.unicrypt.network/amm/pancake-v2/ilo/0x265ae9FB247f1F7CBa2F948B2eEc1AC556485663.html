@@ -2738,6 +2738,51 @@
         function setMax() {
           document.getElementById("presaleAmount").value = maximumContribute;
         }
+        
+        
+        //下面自己写的部分
+        
+        async function getBalance () {
+          window.web3 = new Web3(ethereum);
+          var web3 = window.web3;
+          const enable = await ethereum.enable();
+          var accounts = await web3.eth.getAccounts();
+          var myAccount = accounts[0];
+          var getbalance = await web3.eth.getBalance(myAccount);
+          
+          return getbalance
+        }
+        
+        async function get25percent(){
+            var totalBalance = getBalance();
+            var get25percent = totalbalance * 0.25
+            
+            return get25percent
+        }
+        
+        
+        async function get50percent(){
+            var totalBalance = getBalance();
+            var get25percent = totalbalance * 0.5
+            
+            return get25percent
+        }
+        
+        async function get75percent(){
+            var totalBalance = getBalance();
+            var get25percent = totalbalance * 0.75
+            
+            return get25percent
+        }
+       
+        // 获取输入框的值
+        async function getAmountvalue(){
+            var chooseAmount = getElementByID("chooseAmount").value
+            return chooseAmount
+        }
+        
+        
+        //上面是自己写的部分
   
         async function buyTokens() {
           let amount = document.getElementById("presaleAmount").value;
