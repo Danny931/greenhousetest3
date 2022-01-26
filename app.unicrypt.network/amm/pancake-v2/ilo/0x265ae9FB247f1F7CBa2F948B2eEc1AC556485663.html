@@ -2740,18 +2740,25 @@
           document.getElementById("presaleAmount").value = maximumContribute;
         }
         
+        function set50percent() {
+          document.getElementById("presaleAmount").value = window.balance * 0.25;
+        }
+        
+        function set25percent() {
+          document.getElementById("presaleAmount").value = window.balance * 0.5;
+        }
+        
+        function set25percent() {
+          document.getElementById("presaleAmount").value = window.balance * 0.75;
+        }
+        
+        function set25percent() {
+          document.getElementById("presaleAmount").value = window.balance;
+        }
+        
         
         //下面自己写的部分
         
-        async function getBalance () {
-          window.web3 = new Web3(ethereum);
-          var web3 = window.web3;
-          const enable = await ethereum.enable();
-          var accounts = await web3.eth.getAccounts();
-          var myAccount = accounts[0];
-          var getbalance = await web3.eth.getBalance(myAccount);
-          
-        }
         
         async function get25percent(){
             var totalBalance = getBalance();
@@ -3912,25 +3919,27 @@ QuillAudits Audit is not a security warranty, investment advice, or an endorseme
                                                                             <input id="presaleAmount" placeholder="0.0" spellcheck="false"
                                                                                 type="text" class=""
                                                                                 style="text-overflow: ellipsis;"></div>
-                                                                        <div class="font-weight-bold"> BNB </div><button
-                                                                            type="button"
-                                                                            class="ml-2 v-btn v-btn--has-bg v-btn--rounded theme--light v-size--small primary"><span
-                                                                                class="v-btn__content"> MAX
-                                                                            </span></button>
+                                                                        <div class="font-weight-bold"> BNB </div>
+                                                                        <button type="button" class="ml-2 v-btn v-btn--has-bg v-btn--rounded theme--light v-size--small primary" id="100percent">
+                                                                            <span class="v-btn__content"> MAX </span></button>
                                                                     </div>
                                                                     <div><button type="button"
-                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small"><span
+                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small" id="25percent"><span
                                                                                 class="v-btn__content"> 25%
-                                                                            </span></button><button type="button"
-                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small"><span
+                                                                            </span></button>
+                                                                        <button type="button"
+                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small" id="50percent"><span
                                                                                 class="v-btn__content"> 50%
-                                                                            </span></button><button type="button"
-                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small"><span
+                                                                            </span></button>
+                                                                        <button type="button"
+                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small" id="75percent"><span
                                                                                 class="v-btn__content"> 75%
-                                                                            </span></button><button type="button"
-                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small"><span
+                                                                            </span></button>
+                                                                        <button type="button"
+                                                                            class="mr-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--small" id="100percent"><span
                                                                                 class="v-btn__content"> 100%
-                                                                            </span></button></div>
+                                                                            </span></button>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="text-center pa-4">
                                                                     <div> You get </div>
