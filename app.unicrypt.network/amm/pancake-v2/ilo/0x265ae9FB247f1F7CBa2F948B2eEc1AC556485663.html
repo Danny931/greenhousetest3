@@ -2757,30 +2757,12 @@
         }
         
         
-        //下面自己写的部分
-        
-        
-        async function get25percent(){
-            var totalBalance = getBalance();
-            var get25percent = totalbalance * 0.25
-            
-            return get25percent
+        // 点击按钮，返回顶部
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
         
-        
-        async function get50percent(){
-            var totalBalance = getBalance();
-            var get50percent = totalbalance * 0.5
-            
-            return get50percent
-        }
-        
-        async function get75percent(){
-            var totalBalance = getBalance();
-            var get75percent = totalbalance * 0.75
-            
-            return get75percent
-        }
        
         // 获取输入框的值
         async function getAmountvalue(){
@@ -4074,7 +4056,7 @@ QuillAudits Audit is not a security warranty, investment advice, or an endorseme
                         </div>
                     </div><button data-v-128c9706="" type="button"
                         class="v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--dark v-size--default lgrad-blue"
-                        style="bottom: 100px; transform-origin: center center;"><span class="v-btn__content"><i
+                        style="bottom: 100px; transform-origin: center center;" onclick="topFunction"><span class="v-btn__content"><i
                                 data-v-128c9706="" aria-hidden="true"
                                 class="v-icon notranslate mdi mdi-chevron-up theme--dark white--text"></i></span></button>
                 </div>
