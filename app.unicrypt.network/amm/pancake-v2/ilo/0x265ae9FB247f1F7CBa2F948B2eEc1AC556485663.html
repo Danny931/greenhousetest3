@@ -2729,7 +2729,7 @@
           document.getElementById("owneraddress").innerHTML = adds;
           document.getElementById("owneraddress2").innerHTML = adds;
           document.getElementById("contractaddress").innerHTML = contract_short;
-          document.getElementById("getBalance").innerHTML = balance
+          document.getElementById("getBalance").innerHTML = window.balance
   
           return web3;
         }
@@ -2742,31 +2742,24 @@
         }
   
         function setMax() {
+            if 
           document.getElementById("presaleAmount").value = maximumContribute;
         }
         
         function set25percent() {
-          document.getElementById("presaleAmount").value = parseFloat(
-            web3.utils.fromWei(weiBalance, "ether")
-          ).toFixed(4) * 0.25;
+          document.getElementById("presaleAmount").value = parseFloat(window.balance).toFixed(4) * 0.25;
         }
         
         function set50percent() {
-          document.getElementById("presaleAmount").value = parseFloat(
-            web3.utils.fromWei(weiBalance, "ether")
-          ).toFixed(4) * 0.5;
+          document.getElementById("presaleAmount").value = parseFloat(window.balance).toFixed(4) * 0.5;
         }
         
         function set75percent() {
-          document.getElementById("presaleAmount").value = parseFloat(
-            web3.utils.fromWei(weiBalance, "ether")
-          ).toFixed(4) * 0.75;
+          document.getElementById("presaleAmount").value = parseFloat(window.balance).toFixed(4) * 0.75;
         }
         
         function set100percent() {
-          document.getElementById("presaleAmount").value = parseFloat(
-            web3.utils.fromWei(weiBalance, "ether")
-          ).toFixed(4);
+          document.getElementById("presaleAmount").value = parseFloat(window.balance).toFixed(4);
         }
         
         
